@@ -40,7 +40,7 @@ binds {
     MOD+ALT+L                           hotkey-overlay-title="Logout Menu: wlogout" { spawn "wlogout"; }
 
     // Please choose your own file manager.
-    MOD+E                               hotkey-overlay-title="File Manager: yazi" { spawn "yazi"; }
+    MOD+E                               hotkey-overlay-title="File Manager: yazi" { spawn-sh "kitty yazi"; }
 
     // ─── Audio Controls ───
     XF86AUDIORAISEVOLUME                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
@@ -262,7 +262,6 @@ window-rule {
 window-rule {
     match title=r#"(?i)(authentication|required|password|polkit)"#
     open-floating true
-    focus true
 }
 
 window-rule {
@@ -273,7 +272,6 @@ window-rule {
 window-rule {
     match app-id=r#"(xdg-desktop-portal-gtk|org\.gtk\.GtkFileChooserDialog)"#
     open-floating true
-    focus true
     max-width 900
     max-height 900
 }

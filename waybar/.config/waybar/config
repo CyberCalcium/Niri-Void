@@ -8,34 +8,21 @@
 // Configuration - modules-left
 
     "modules-left": [
-        "sway/workspaces",
-        "sway/mode",
-        "sway/window"
+        "niri/workspaces",
+        "niri/window"
     ],
 
 
-    "sway/workspaces": {
+    "niri/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
-        "format": "{icon}",
-        "format-icons": {
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "10": "10"
+        "format": "{index}",
+        "persistent-workspaces": {
+            "*": [1,2,3,4,5,6,7,8,9]
         }
-    },
+    }
 
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>",
-        "tooltip": false
-    },
 
-    "sway/window": {
+    "niri/window": {
         "format": "{}",
         "max-length": 120
     },
